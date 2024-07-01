@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title style="text-align: center;">
+      <a href="/" style="text-decoration: none; color: white;">Nome do
+        Restaurante</a>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="irParaLogin()">
+        <ion-icon slot="icon-only" name="log-in"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="dark-background" fullscreen>
+  <form (submit)="submitReserva()">
+    <div class="form-group">
+      <ion-item>
+
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" required></ion-input>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+
+        <ion-input type="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <!--   <ion-label position="floating">Número de Pessoas</ion-label> -->
+
+        <!--    <ion-input type="number" required></ion-input> -->
+      </ion-item>
+
+      <ion-item>
+        <ion-datetime
+          display-format="DD/MM/YYYY HH:mm"
+          picker-format="DD MMM YYYY HH:mm"
+          min="{{ currentDate }}"
+          required></ion-datetime>
+      </ion-item>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Número de Pessoas</ion-label>
+
+      <ion-radio-group [allowEmptySelection]="true">
+        <ion-radio value="2">2</ion-radio> <br />
+
+      </ion-radio-group>
+
+      <ion-radio-group [allowEmptySelection]="true">
+        <ion-radio value="3">3</ion-radio><br />
+
+      </ion-radio-group>
+
+      <ion-radio-group [allowEmptySelection]="true">
+        <ion-radio value="4">4</ion-radio><br />
+      </ion-radio-group>
+
+      <ion-radio-group [allowEmptySelection]="true">
+        <ion-radio value="5">5</ion-radio><br />
+      </ion-radio-group>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed">18:45</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">19:00</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">20:00</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">21:00</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">21:50</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-button type="submit" expand="block" class="submit-button"
+      color="danger">
+      Reservar
+    </ion-button>
+    <ion-list>
+
+    </ion-list>
+  </form>
+</ion-content>
